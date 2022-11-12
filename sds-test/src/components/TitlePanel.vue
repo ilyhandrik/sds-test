@@ -5,7 +5,7 @@ import IconUserInfo from './icons/IconUserInfo.vue'
 
 <template>
   <div class="title-panel">
-    <icon-user-info />
+    <icon-user-info class="title-panel__icon" />
     <div class="title-panel__text">Title Big mob</div>
     <button class="title-panel__button">Label mob</button>
   </div>
@@ -28,6 +28,9 @@ import IconUserInfo from './icons/IconUserInfo.vue'
     border-radius: 20px;
     font-family: 'Manrope', sans-serif;
 }
+.title-panel__icon {
+  flex-shrink: 0;
+}
 .title-panel__text {
     padding-left: 19px;
     flex-grow: 1;
@@ -35,12 +38,14 @@ import IconUserInfo from './icons/IconUserInfo.vue'
     font-weight: 700;
     font-size: 20px;
     color: #fff;
-    ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
 .title-panel__button {
     height: 36px;
     padding: 8px 16px;
+    flex-shrink: 0;
     background: #FFFFFF;
     border-radius: 12px;
     outline: none;
